@@ -69,6 +69,33 @@ g++ AVL.c functions.c -o AVL && ./AVL
 
 ---
 
+
+
+---
+
+## ⏳ Time Complexity
+| Operation | Average Case | Worst Case | Notes |
+|-----------|--------------|------------|-------|
+| **Insertion** | O(log n) | O(log n) | Balanced tree ensures logarithmic depth |
+| **Deletion** | O(log n) | O(log n) | Includes search + possible rotations |
+| **Search** *(inside delete)* | O(log n) | O(log n) | Standard BST search in balanced tree |
+| **Rotations** | O(1) | O(1) | LL, RR, LR, RL each take constant time |
+| **Traversals** | O(n) | O(n) | Visits every node exactly once |
+| **Height Calculation** *(current code)* | O(n) | O(n) | Uses recursive computation, could be O(1) with stored heights |
+| **Balance Factor Calculation** | O(n) | O(n) | Calls `height()` twice per node in current code |
+
+---
+
+## 💾 Space Complexity
+| Operation | Complexity | Notes |
+|-----------|------------|-------|
+| **Insertion/Deletion** | O(log n) | Due to recursion stack in balanced tree |
+| **Traversals** | O(log n) | Recursion depth equals tree height |
+| **Height Calculation** | O(log n) | Recursive calls stack depth equals tree height |
+| **Storage for Tree** | O(n) | Each node stored with `left`, `right`, `val` |
+| **Dynamic Input Array** | O(n) | Allocated via `malloc` |
+
 ## 🧑‍💻 Author
-Created by **Chittajit Nath**
-National Institute of Technology, Durgapur
+- Created by **Chittajit Nath**
+- B-Tech, Computer Science and Engineering
+- National Institute of Technology, Durgapur
