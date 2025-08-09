@@ -158,3 +158,11 @@ void input(int* arr, int n) {
     for(int i=0;i<n;i++)
         scanf("%d", (arr+i));
 }
+
+void freeNodes(Node* root) {
+    if(!root) return;
+    freeNodes(root->left);
+    freeNodes(root->right);
+    free(root);
+    root = NULL;
+}

@@ -40,7 +40,7 @@ int main() {
             default:
                 printf("Please Enter a Valid Choice!!\n");
         }
-    }
-
-
+    } freeNodes(root);
+    free(arr);
+    arr = NULL;
 }

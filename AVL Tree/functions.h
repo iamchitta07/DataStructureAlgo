@@ -22,4 +22,6 @@ Node* deleteHelper(Node*, int);
 Node* deleteNode(Node*, int);
 Node* constructAVLTree(int*, int n);
 void input(int*, int);
+void freeNodes(Node*);
+
 #endif
