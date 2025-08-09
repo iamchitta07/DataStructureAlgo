@@ -43,4 +43,5 @@ int main() {
     } freeNodes(root);
     free(arr);
     arr = NULL;
+    return 0;
 }
